@@ -1,0 +1,63 @@
+<html>
+<head>
+<h2> Demonstrate Set Operations </h2>
+<p> set A = ['apple', 'mango', 'orange'] </p>
+<p> set B = ['grapes', 'apple', 'banana'] </p>
+<p> set C = ['apple', 'orange'] </p>
+<button onclick="union()">Union of Sets</button>
+<button onclick="intersection()">Intersection of Sets</button>
+<button onclick="difference()">Difference of Sets</button>
+<button onclick="subset()">Subset of Set</button>
+<script>
+
+
+
+// two sets of fruits
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['grapes', 'apple', 'banana']);
+const setC = new Set(['apple', 'orange']);
+
+
+function union() {
+    let unionSet = new Set(setA);
+    for (let i of setB) {
+        unionSet.add(i);
+    }
+console.log(unionSet);
+
+}
+
+function intersection() {
+    let intersectionSet = new Set();
+
+    for (let i of setB) {
+        if (setA.has(i)) {
+            intersectionSet.add(i);
+        }
+    }
+   console.log(intersectionSet);
+}
+
+function difference() {
+    let differenceSet = new Set(setA)
+    for (let i of setB) {
+        differenceSet.delete(i)
+    }
+console.log(differenceSet);
+}
+
+function subset() {
+    for (let i of setC) {
+        if (!setA.has(i)) {
+            console.log(false);
+        }
+    }
+
+
+ console.log(true);
+}
+
+
+</script>
+</head>
+</html>

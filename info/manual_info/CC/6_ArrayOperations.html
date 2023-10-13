@@ -1,0 +1,57 @@
+<html>  
+<body>  
+<h3>Demonstrate array operations</h3>
+
+<button onclick="removeElement()">Remove Element</button>
+<button onclick=" chkValue()">Check value</button>
+<button onclick="emptyArray()">Empty Array</button>
+
+<script>    
+       
+
+function removeElement() {    
+    var shoeBrand = ["Nike", " Adidas", " Sparks", " RedTape"];    
+    
+    console.log("Elements in array before removing: <br>" + shoeBrand );  
+    
+    // Removing last element from the array    
+    var poppedElement = shoeBrand.pop();    
+    console.log("Removed last element from array using pop(): " + poppedElement );    
+     
+     //display remaining elements present in array after removing  
+    console.log("New array: " + " " + shoeBrand);    
+    
+     //removing 2 elemnts from position '1'. 
+    shoeBrand.splice(1,2);
+    console.log("Removed elements  from array using spilce(1,2) : New Array: " + " " + shoeBrand );    
+   
+}    
+   
+function chkValue(){
+  var carBrand = ["Maruti", " BMW", " Kia", " Tata"];  
+   console.log(carBrand);  
+    var str1 =   prompt("Enter carBrand Value");
+   const hasValue = carBrand.includes(str1) 
+   console.log(carBrand);
+   console.log("Value entered: " + str1);
+  //check the condition
+   if(hasValue) {
+    console.log('Array contains: ' + str1);
+    }
+    else {
+    console.log('Array does not contain:  ' + str1);
+	}
+}
+
+function emptyArray(){
+ var carBrand = ["Maruti", " BMW", " Kia", " Tata"];    
+  console.log(carBrand);
+  
+  carBrand.splice(0,carBrand.length);
+//while(a.length > 0) {
+  //  a.pop();
+  console.log("Empty Array " + " " + carBrand );    
+}
+</script>    
+</body>  
+</html>  
