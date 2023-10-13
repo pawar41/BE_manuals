@@ -1,0 +1,10 @@
+ 1 graph
+ 2 pages
+
+
+ RMT exp 5 :-
+
+write question and answers by hand
+    * Repeller voltage: 250 V
+    * Beam voltage: 210 V
+    * Beam current: 13 mA
